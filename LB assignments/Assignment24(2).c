@@ -1,0 +1,42 @@
+#include<stdlib.h>
+#include<stdio.h>
+
+int CountChar(char *str,char cValue)
+{
+   int iCount=0;
+    
+    while(*str!='\0')
+    {
+        if(*str==cValue)
+        {
+            iCount++;
+        }
+        str++;
+    }
+    return iCount;
+}
+
+int main()
+{
+   char Arr[20];
+   char ch='\0';
+   int iRet=0;
+ 
+   printf("Enter string\n :");
+   scanf("%[^'\n']s",Arr);     //Special scanf
+
+
+    fflush(stdin);   //does the same work flush the enter which is remained at last and ask character the input directly
+
+    printf("Enter the character\n :");
+    scanf("%c",&ch);    
+ 
+    
+   iRet=CountChar(Arr,ch);    //strlenX(100);
+
+   printf("number of occurences : %d\n",iRet);
+
+
+
+    return 0;
+}

@@ -1,0 +1,33 @@
+
+import java.util.*;
+
+class Program379
+{
+    public static void main(String arg[])
+    {
+        Scanner sobj=new Scanner(System.in);
+
+        System.out.println("Enter the string :");
+        String str=sobj.nextLine();
+  
+       str=str.trim();
+        str=str.replaceAll("\\s+"," ");
+
+        String arr[]=str.split(" ");
+
+        StringBuffer output=new StringBuffer();
+        for(String s : arr)
+        {
+              StringBuffer word =new StringBuffer(s);
+              output.append((word.reverse()).append(" "));
+        }
+          
+       String result=new String(output);
+
+      result=result.trim();
+        System.out.println("Result is :"+output);
+
+    }
+
+      
+}

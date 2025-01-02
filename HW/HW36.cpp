@@ -1,0 +1,40 @@
+// pattern printing :
+//  i/p - 4,4
+//        *  
+//        * *  
+//        * * * 
+//        * * * * 
+
+#include <iostream>
+using namespace std;
+
+void Display(int iRow, int iCol)
+{
+    int i,j = 0;
+    for (int i = 1; i <= iRow; i++)
+    {
+        for (int j = 1; j <= iCol; j++)
+        {
+           if((i==j)||(i>j))
+           {
+             cout << "*" << "\t";
+           }
+        }
+        cout << "\n";
+    }
+}
+
+int main()
+{
+    int iRow, iCol;
+
+    cout << "Enter the number of rows :" << endl;
+    cin >> iRow;
+
+    cout << "Enter the number of coloumns :" << endl;
+    cin >> iCol;
+
+    Display(iRow, iCol);
+
+    return 0;
+}

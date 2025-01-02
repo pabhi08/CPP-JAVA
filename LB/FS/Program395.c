@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<fcntl.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main()
+{
+   
+
+int fd=0;         //file descriptor
+char Fname[30];
+
+char Arr[50]={'\0'};
+int iRet=0;
+
+printf("Enter the file name you want to open\n");
+scanf("%s",Fname);
+
+printf("Enter the data you want to write into the file\n");
+scanf("%[^'\n']s",Arr);
+
+fd=open(Fname,O_RDWR);
+
+if(fd==-1)
+{
+    printf("Unable to open the file\n");
+     return -1;
+}
+
+
+iRet=write(fd,Arr,strlen(Arr));
+printf("%d bytes gets succesfully written in the file\n",iRet);
+
+close(fd);
+
+    return 0;
+}

@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+
+template<class T>
+
+class ArrayX
+{
+    public :
+    int *Arr;
+    int Size;
+
+    ArrayX(int Length)
+    {
+        Size=Length;
+        Arr=new int [Size];
+
+    }
+
+    void Accept()
+    {
+        cout<<"Enter the elements of array\n";
+        int iCnt=0;
+        for(iCnt=0;iCnt<Size;iCnt++)
+        {
+            cin>>Arr[iCnt];
+        }
+    }
+
+      void Display()
+    {
+        cout<< "elements of array are \n";
+        int iCnt=0;
+        for(iCnt=0;iCnt<Size;iCnt++)
+        {
+           cout<<Arr[iCnt]<<"\n"
+        }
+    }
+
+};
+
+int main()
+{
+    ArrayX obj(5);
+    obj.Accept();
+    obj.Display();
+      
+      return 0;
+}

@@ -1,0 +1,53 @@
+
+/*
+palindromic pattern
+   1
+  212
+ 32123
+4321234
+54321345 
+ */
+
+import java.util.*;
+
+class Program38
+{
+    public static void main(String args[])
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter the number of rows :");
+        int iRow=sobj.nextInt();
+
+        System.out.println("Enter the number of columns :");
+        int jCol=sobj.nextInt();
+
+        for(int i=1;i<=iRow;i++)
+        {
+            //spaces
+             int spaces=(iRow-i);
+             for(int j=1;j<=spaces;j++)
+            {
+               System.out.print(" ");
+            }
+
+           //first half
+          
+            for(int j=i;j>=1;j--)
+            {
+                System.out.print(j);
+               
+            }
+
+            for(int j=2;j<=i;j++)
+            {
+                System.out.print(j);
+               
+            }
+        System.out.println(); 
+        }
+
+    }
+
+ }
+
